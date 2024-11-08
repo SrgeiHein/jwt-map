@@ -8,6 +8,10 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
    ```bash
    npm install
+   "@react-native-async-storage/async-storage"
+   "axios"
+   "expo-location"
+   "react-native-maps"
    ```
 
 2. Start the app
@@ -33,18 +37,27 @@ When you're ready, run:
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. Obtain a Google Maps API key by following the [Google Maps Platform documentation](https://developers.google.com/maps/documentation).
+2. Add the API key to `app.json`:
 
-## Learn more
+   ```json
+   {
+     "expo": {
+       "android": {
+         "config": {
+           "googleMaps": {
+             "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+           }
+         }
+       },
+       "ios": {
+         "config": {
+           "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+         }
+       }
+     }
+   }
+   ```
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   Change url with your ip address:
+   http://192.168.1.38:8080
