@@ -29,14 +29,6 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
 1. Obtain a Google Maps API key by following the [Google Maps Platform documentation](https://developers.google.com/maps/documentation).
 2. Add the API key to `app.json`:
 
